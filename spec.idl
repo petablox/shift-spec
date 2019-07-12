@@ -379,12 +379,9 @@ interface AssignmentExpression : Expression {
 };
 
 // `ExponentiationExpression`, `MultiplicativeExpression`, `AdditiveExpression`, `ShiftExpression`, `RelationalExpression`, `EqualityExpression`, `BitwiseANDExpression`, `BitwiseXORExpression`, `BitwiseORExpression`, `LogicalANDExpression`, `LogicalORExpression`
-interface BinaryExpression : Expression {
-  attribute BinaryOperator operator;
-  // The expression before the operator.
-  attribute Expression left;
-  // The expression after the operator.
-  attribute Expression right;
+interface N-aryExpression : Expression {
+  attribute BinaryOperator[] operators;
+  attribute Expression[] operands;
 };
 
 interface CallExpression : Expression {
